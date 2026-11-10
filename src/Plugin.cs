@@ -33,7 +33,12 @@ public class Plugin : BasePlugin<TvGuideConfiguration>, IHasWebPages
         yield return new PluginPageInfo
         {
             Name = Name,
-            EmbeddedResourcePath = GetType().Assembly.GetName().Name + ".Configuration.config.html",
+            // NOTE: rules_dotnet v0.21.5 has a bug with resource name generation
+            // The resource should be "TvGuide.Configuration.config.html" but due to
+            // a bug in how the build system handles embedded resource paths, it becomes
+            // "TvGuide.onfiguration.config.html" (missing "C").
+            // See: https://github.com/bazelbuild/rules_dotnet/issues/474
+            EmbeddedResourcePath = "TvGuide.onfiguration.config.html",
         };
     }
 }
