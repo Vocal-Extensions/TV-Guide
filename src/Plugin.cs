@@ -26,14 +26,19 @@ public class Plugin : BasePlugin<TvGuideConfiguration>, IHasWebPages
 
     public override string Description => "Virtual TV channels from library genres with weekly schedules";
 
-    public override Guid Id => new Guid("b7e3c1d4-5f2a-4890-abcd-9e8f76543210");
+    public override Guid Id => new Guid("3d5cf514-9a68-42c1-94bd-ce7fa3cc399b");
 
     public IEnumerable<PluginPageInfo> GetPages()
     {
         yield return new PluginPageInfo
         {
             Name = Name,
-            EmbeddedResourcePath = GetType().Assembly.GetName().Name + ".Configuration.config.html",
+            // NOTE: rules_dotnet v0.21.5 has a bug with resource name generation
+            // The resource should be "TvGuide.Configuration.config.html" but due to
+            // a bug in how the build system handles embedded resource paths, it becomes
+            // "TvGuide.onfiguration.config.html" (missing "C").
+            // See: https://github.com/bazelbuild/rules_dotnet/issues/474
+            EmbeddedResourcePath = "TvGuide.onfiguration.config.html",
         };
     }
 }
