@@ -14,22 +14,6 @@
         "sourceUrl": "https://github.com/imperialdr/TvGuide/releases/download/v2.0.0/12.0.0.0.-.TvGuide_2.0.0.0.zip",
         "timestamp": "2026-11-10T23:03:42Z",
         "version": "2.0.0.0"
-      },
-      {
-        "checksum": "ae515dd12295aa65ea5e35f6a77647b6",
-        "changelog": "Release v1.0.2.5",
-        "targetAbi": "12.0.0.0",
-        "sourceUrl": "https://github.com/imperialdr/TvGuide/releases/download/v1.0.2.5/12.0.0.0.-.TvGuide_1.0.2.5.zip",
-        "timestamp": "2026-03-17T07:04:40Z",
-        "version": "1.0.2.5"
-      },
-      {
-        "checksum": "17fe5076e042d94915e37383e83fe0c5",
-        "changelog": "Release v1.0.2.3",
-        "targetAbi": "12.0.0.0",
-        "sourceUrl": "https://github.com/imperialdr/TvGuide/releases/download/v1.0.2.3/12.0.0.0.-.TvGuide_1.0.2.3.zip",
-        "timestamp": "2026-03-16T22:37:34Z",
-        "version": "1.0.2.3"
       }
     ]
   }
