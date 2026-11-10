@@ -4,7 +4,6 @@ A Jellyfin plugin that auto-generates virtual TV channels from your media librar
 
 Works with all Jellyfin clients out of the box!
 
-
 ![TvGuide in Jellyfin](static/tv_guide.png?raw=true)
 
 ## How it works
@@ -93,7 +92,7 @@ The output DLLs are at `bazel-bin/TvGuide/net9.0/TvGuide.dll` and `bazel-bin/run
 1. In Jellyfin, go to **Dashboard > Plugins > Repositories**
 2. Add a new repository with the URL:
    ```
-   https://raw.githubusercontent.com/mattboardman/TvGuide/main/manifest.json
+   https://raw.githubusercontent.com/imperialdr/TvGuide/main/manifest.json
    ```
 3. Go to **Catalog**, find **TvGuide** under **Live TV**, and install it
 4. Restart Jellyfin
@@ -105,10 +104,10 @@ The output DLLs are at `bazel-bin/TvGuide/net9.0/TvGuide.dll` and `bazel-bin/run
 2. Copy the DLLs and `meta.json` into your Jellyfin plugins directory:
 
 ```sh
-mkdir -p /var/lib/jellyfin/data/plugins/TvGuide_1.0.0.0
-cp bazel-bin/TvGuide/net9.0/TvGuide.dll /var/lib/jellyfin/data/plugins/TvGuide_1.0.0.0/
-cp bazel-bin/runtime_deps_out/*.dll /var/lib/jellyfin/data/plugins/TvGuide_1.0.0.0/
-cp meta.json /var/lib/jellyfin/data/plugins/TvGuide_1.0.0.0/
+mkdir -p /var/lib/jellyfin/data/plugins/TvGuide_2.0.0.0
+cp bazel-bin/TvGuide/net9.0/TvGuide.dll /var/lib/jellyfin/data/plugins/TvGuide_2.0.0.0/
+cp bazel-bin/runtime_deps_out/*.dll /var/lib/jellyfin/data/plugins/TvGuide_2.0.0.0/
+cp meta.json /var/lib/jellyfin/data/plugins/TvGuide_2.0.0.0/
 ```
 
 3. Restart Jellyfin
