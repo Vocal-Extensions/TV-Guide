@@ -19,10 +19,9 @@ public class Plugin : BasePlugin<TvGuideConfiguration>, IHasWebPages
 
     public static Plugin? Instance { get; private set; }
 
-    public static TvGuideConfiguration GetCurrentConfiguration()
-        => Instance?.Configuration ?? new TvGuideConfiguration();
+    public static TvGuideConfiguration GetCurrentConfiguration() => Instance?.Configuration ?? new TvGuideConfiguration();
 
-    public override string Name => "TvGuide";
+    public override string Name => "TV Guide";
 
     public override string Description => "Virtual TV channels from library genres with weekly schedules";
 
@@ -33,6 +32,7 @@ public class Plugin : BasePlugin<TvGuideConfiguration>, IHasWebPages
         yield return new PluginPageInfo
         {
             Name = Name,
+            EnableInMainMenu = Instance?.Configuration.EnableMainMenu ?? true,
             // NOTE: rules_dotnet v0.21.5 has a bug with resource name generation
             // The resource should be "TvGuide.Configuration.config.html" but due to
             // a bug in how the build system handles embedded resource paths, it becomes

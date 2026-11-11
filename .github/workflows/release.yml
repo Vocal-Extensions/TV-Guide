@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Setup Bazel
@@ -23,11 +23,11 @@ jobs:
           disk-cache: ${{ github.workflow }}
           repository-cache: true
 
-      - name: Build TvGuide and runtime deps
+      - name: Build TV Guide & Runtime Dependencies
         run: |
           bazel build //:TvGuide //:runtime_deps
 
-      - name: Prepare release artifact
+      - name: Prepare Release Artifact
         id: artifact
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
@@ -44,7 +44,7 @@ jobs:
           cp bazel-bin/runtime_deps_out/*.dll "${STAGE_DIR}/"
           cp meta.json "${STAGE_DIR}/"
 
-          ZIP_NAME="${TARGET_ABI}.-.TvGuide_${PLUGIN_VERSION}.zip"
+          ZIP_NAME="${TARGET_ABI}-TVGuide-${PLUGIN_VERSION}.zip"
           zip -r "${ZIP_NAME}" "${STAGE_DIR}"
 
           CHECKSUM=$(md5sum "${ZIP_NAME}" | awk '{print $1}')
@@ -61,7 +61,7 @@ jobs:
           files: ${{ steps.artifact.outputs.zip_name }}
           generate_release_notes: true
 
-      - name: Update manifest.json
+      - name: Update Manifest
         env:
           CHECKSUM: ${{ steps.artifact.outputs.checksum }}
           PLUGIN_VERSION: ${{ steps.artifact.outputs.plugin_version }}
@@ -94,5 +94,5 @@ jobs:
 
           git checkout main
           git add manifest.json
-          git commit -m "Update manifest for ${GITHUB_REF_NAME}"
+          git commit -m "Updated Manifest for ${GITHUB_REF_NAME}"
           git push origin main

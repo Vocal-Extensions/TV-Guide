@@ -1,11 +1,11 @@
 {
   "guid": "3d5cf514-9a68-42c1-94bd-ce7fa3cc399b",
-  "name": "TvGuide",
+  "name": "TV Guide",
   "description": "Virtual TV channels from library genres with weekly schedules",
   "overview": "Auto-generates TV channels by genre from your media library",
   "owner": "Zach J Murphy",
   "category": "Live TV",
-  "version": "2.0.0.0",
+  "version": "2.1.0.0",
   "targetAbi": "12.0.0.0",
   "status": "Active",
   "autoUpdate": true,
