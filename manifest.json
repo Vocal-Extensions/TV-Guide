@@ -8,6 +8,14 @@
     "category": "Live TV",
     "versions": [
       {
+        "checksum": "eb40a5fc543b24fcece47e6e3be216b6",
+        "changelog": "Release v2.2.00",
+        "targetAbi": "12.0.0.0",
+        "sourceUrl": "https://github.com/Vocal-Extensions/TV-Guide/releases/download/v2.2.00/12.0.0.0-TVGuide-2.2.00.0.zip",
+        "timestamp": "2026-11-11T16:53:01Z",
+        "version": "2.2.00.0"
+      },
+      {
         "checksum": "7e812fca893371a7691cb75cb71eda09",
         "changelog": "Release v2.1.0.0",
         "targetAbi": "12.0.0.0",
