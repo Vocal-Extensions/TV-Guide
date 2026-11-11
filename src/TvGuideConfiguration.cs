@@ -47,4 +47,6 @@ public class TvGuideConfiguration : BasePluginConfiguration
     public string OpenAiModel { get; set; } = "gpt-5-mini";
 
     public int ScheduleEpoch { get; set; } = 0;
+
+    public bool EnableMainMenu { get; set; } = true;
 }
