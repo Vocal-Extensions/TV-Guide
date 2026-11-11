@@ -92,7 +92,7 @@ The output DLLs are at `bazel-bin/TvGuide/net9.0/TvGuide.dll` and `bazel-bin/run
 1. In Jellyfin, go to **Dashboard > Plugins > Repositories**
 2. Add a new repository with the URL:
    ```
-   https://raw.githubusercontent.com/vocal-visions/TvGuide/main/manifest.json
+   https://raw.githubusercontent.com/Vocal-Extensions/TV-Guide/main/manifest.json
    ```
 3. Go to **Catalog**, find **TV Guide** under **Live TV**, and install it
 4. Restart Jellyfin

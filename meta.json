@@ -1,6 +1,7 @@
 {
   "guid": "3d5cf514-9a68-42c1-94bd-ce7fa3cc399b",
   "name": "TV Guide",
+  "imageUrl": "https://raw.githubusercontent.com/Vocal-Extensions/manifest/refs/heads/main/images/TV-Guide.png",
   "description": "Virtual TV channels from library genres with weekly schedules",
   "overview": "Auto-generates TV channels by genre from your media library",
   "owner": "Zach J Murphy",
